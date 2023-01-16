@@ -49,28 +49,28 @@ class _BookNowScreenState extends State<BookNowScreen> {
   final pickOutPointFormkey = GlobalKey<FormState>();
   final dateFormKey = GlobalKey<FormState>();
   bool isAnimating = true;
-  final Uri phoneNumber = Uri.parse('tel:0549912889');
-  final Uri whatsApp = Uri.parse('https://wa.me/0549912889');
+  final Uri phoneNumber = Uri.parse('tel:8870351602');
+  final Uri whatsApp = Uri.parse('https://wa.me/8870351602');
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(getVerticalSize(70)),
+        preferredSize: Size.fromHeight(getVerticalSize(63)),
         child: CustomAppbarWithicon(
             arrowOnTap: (){
               Get.toNamed('/BottomNavigationBar');
             },
           titleName: 'Book Your Ride Here',
             arrowBottomPadding: 20,
-            arrowTopPadding: 54,
+            arrowTopPadding: 64,
             titleContainerHeight: 24,
             titleContainerWidth: 160,
             gap: 12,
             rowLeftPadding: 24,
             rowRightPadding: 110,
             titleBottomPadding: 20,
-            titleTopPadding: 52),
+            titleTopPadding: 60),
       ),
       body: SafeArea(
             child: SingleChildScrollView(

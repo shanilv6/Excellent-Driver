@@ -56,6 +56,7 @@ class BookingHistoryController extends GetxController {
 
         historyList.forEach((element) {
           bookingHistoryList.add(BoookingHistoryModel(
+            name: element["name"],
             status: element["status"],
             id: element["id"],
             pickupDate: element["pickup_date"],

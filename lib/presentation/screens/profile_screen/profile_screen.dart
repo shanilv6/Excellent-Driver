@@ -43,21 +43,21 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return Scaffold(
         backgroundColor: ColorConstant.homeScreenBackground,
         appBar: PreferredSize(
-          preferredSize: Size.fromHeight(getVerticalSize(70)),
+          preferredSize: Size.fromHeight(getVerticalSize(63)),
           child: CustomAppbarWithicon(
               arrowOnTap: () {
                 Get.offAllNamed('/BottomNavigationBar');
               },
               titleName: 'Profile',
               arrowBottomPadding: 20,
-              arrowTopPadding: 52,
+              arrowTopPadding: 64,
               titleContainerHeight: 24,
               titleContainerWidth: 140,
               gap: 56,
               rowLeftPadding: 24,
               rowRightPadding: 100,
               titleBottomPadding: 20,
-              titleTopPadding: 50),
+              titleTopPadding: 60),
         ),
         body: SafeArea(
           child: SingleChildScrollView(

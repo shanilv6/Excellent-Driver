@@ -8,6 +8,7 @@ String upcomingBookingModelToJson(UpcomingBookingModel data) =>
 
 class UpcomingBookingModel {
   UpcomingBookingModel({
+    required this.name,
     required this.id,
     required this.pickupDate,
     required this.pickupTime,
@@ -16,7 +17,7 @@ class UpcomingBookingModel {
   });
 
   int id;
-
+  String name;
   String? pickupDate;
   String? pickupTime;
   String? pickupLocation;
@@ -24,6 +25,7 @@ class UpcomingBookingModel {
 
   factory UpcomingBookingModel.fromJson(Map<String, dynamic> json) =>
       UpcomingBookingModel(
+        name: json["name"],
         id: json["id"],
         pickupDate: json["pickup_date"],
         pickupTime: json["pickup_time"],
@@ -32,6 +34,7 @@ class UpcomingBookingModel {
       );
 
   Map<String, dynamic> toJson() => {
+        "name":name,
         "id": id,
         "pickup_date": pickupDate,
         "pickup_time": pickupTime,

@@ -38,6 +38,7 @@ class HistoryTabScreen extends StatelessWidget {
                   children: List.generate(
                       bookingsHistoryController.bookingHistoryList.length,
                       (index) => HistoryTabContainer(
+                        name: bookingsHistoryController.bookingHistoryList[index].name,
                           pickingTime: bookingsHistoryController
                               .bookingHistoryList[index].pickupTime,
                           status: bookingsHistoryController.bookingHistoryList[index].status,

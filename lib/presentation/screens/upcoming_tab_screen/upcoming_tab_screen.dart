@@ -35,6 +35,7 @@ class UpComingTabScreen extends StatelessWidget {
                     children: List.generate(
                       upComingBookingController.upcomingBookingList.length,
                       (index) => UpcomingTabContainer(
+                        name: upComingBookingController.upcomingBookingList[index].name,
                         id: upComingBookingController.upcomingBookingList[index].id,
                           dateAndTime:
                               '${upComingBookingController.upcomingBookingList[index].pickupDate}',

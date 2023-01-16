@@ -24,13 +24,8 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int _currentindex = 0;
-  final Uri phoneNumber = Uri.parse('tel:0549912889');
- // final Uri whatsApp = Uri.parse('https://wa.me/0549912889');
-  void launchWhatsapp({@required number,@required message}) async{
-    String url = "whatsapp://send?phone=$number&text=$message";
-
-    await canLaunch(url) ? launch(url) : print("cant open whatsapp");
-  }
+  final Uri phoneNumber = Uri.parse('tel:8870351602');
+  final Uri whatsApp = Uri.parse('https://wa.me/8870351602');
 
 
   final _pageController = PageController();
@@ -40,14 +35,14 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
         backgroundColor: ColorConstant.homeScreenBackground,
         appBar: PreferredSize(
-          preferredSize: Size.fromHeight(getVerticalSize(70)),
+          preferredSize: Size.fromHeight(getVerticalSize(63)),
           child: const CustomAppBar(
               titleBottomPadding: 20,
               titleContainerHeight: 24,
               titleContainerWidth: 175,
               titleLeftPadding: 95,
-              titleRightPadding: 95,
-              titleTopPadding: 52),
+              titleRightPadding: 86,
+              titleTopPadding: 65),
         ),
         body: SingleChildScrollView(
           child: Column(children: [
@@ -183,8 +178,8 @@ launchUrl(phoneNumber);
                         //Whatsapp button
                         InkWell(
 onTap: (){
-  //launchUrl(whatsApp);
-  launchWhatsapp(number: "+918870351603", message: "Hello");
+  launchUrl(whatsApp);
+
 },
                           child: BookingsButton(topPadding: 10,
                               buttonWidth: 279,

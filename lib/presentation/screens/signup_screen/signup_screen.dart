@@ -1,15 +1,7 @@
 import 'package:edriver/core/app_export.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:google_fonts/google_fonts.dart';
-
-import '../../../core/theme/app_decoration.dart';
-import '../../../core/utils.dart';
-import '../../../core/utils/color_constant.dart';
-import '../../../core/utils/image_constant.dart';
-import '../../../core/utils/size_utils.dart';
-import '../../../core/utils/style.dart';
+import '../../../../core/utils.dart';
 import '../../../widgets/already_account_button.dart';
 import '../../../widgets/button_container.dart';
 import '../../../widgets/google_signup_container.dart';
@@ -26,7 +18,7 @@ class SignupScreen extends StatefulWidget {
 }
 
 class _SignupScreenState extends State<SignupScreen> {
-  bool value = false;
+  bool isChecked = false;
   bool visibility = false;
   bool obscureTextValue = true;
   final fullNameFormKey = GlobalKey<FormState>();
@@ -34,6 +26,10 @@ class _SignupScreenState extends State<SignupScreen> {
   final mobileNumberFormKey = GlobalKey<FormState>();
   final passwordFormKey = GlobalKey<FormState>();
   var signupcontrollers = Get.put(SignupController());
+
+   void printMessege(){
+     Utils.oneTimeSnackBar("User accepted the agreement");
+   }
 
   @override
   Widget build(BuildContext context) {
@@ -178,10 +174,11 @@ class _SignupScreenState extends State<SignupScreen> {
                           side: BorderSide(
                             color: ColorConstant.buttonBlue,
                           ),
-                          value: value,
+                          value: isChecked,
+
                           onChanged: (value) {
                             setState(() {
-                              this.value = value!;
+                              isChecked = value!;
                               checkBoxValue = value;
                             });
                           }),
@@ -218,7 +215,7 @@ class _SignupScreenState extends State<SignupScreen> {
                               if (passwordFormKey.currentState!.validate()) {
                                 (checkBoxValue == true)?
                                 signupcontrollers.signup().then((value) => (signupcontrollers.isSignupSuccess.value == true) ? Get.toNamed('/LoginScreen') : null):
-                                Utils.oneTimeSnackBar("Accepting terms and conditions",
+                                Utils.oneTimeSnackBar("Accept terms and conditions",
                                     bgColor: Colors.red, time: 3);
                               }
                             }

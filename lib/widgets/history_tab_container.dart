@@ -7,12 +7,13 @@ import '../core/utils/style.dart';
 import 'booking_status_button.dart';
 
 class HistoryTabContainer extends StatelessWidget {
+  final String name;
   final String dateAndTime;
   final String pickingPoint;
   final String droppingPoint;
   final String pickingTime;
   final String status;
-  const HistoryTabContainer({Key? key,required this.pickingTime,required this.status,required this.droppingPoint,required this.pickingPoint,required this.dateAndTime}) : super(key: key);
+  const HistoryTabContainer({Key? key,required this.pickingTime,required this.status,required this.droppingPoint,required this.pickingPoint,required this.dateAndTime, required this.name}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -57,7 +58,7 @@ class HistoryTabContainer extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'Customer Name',
+                              name,
                               style: Textstyles.upcomingBookingTitleStyle,
                             ),
                             SizedBox(

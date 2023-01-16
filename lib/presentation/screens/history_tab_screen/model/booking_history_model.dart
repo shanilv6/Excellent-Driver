@@ -10,6 +10,7 @@ String boookingHistoryModelToJson(BoookingHistoryModel data) =>
 
 class BoookingHistoryModel {
   BoookingHistoryModel({
+    required this.name,
     required this.id,
     required this.pickupDate,
     required this.pickupTime,
@@ -19,7 +20,7 @@ class BoookingHistoryModel {
   });
 
   int id;
-
+  String name;
   String pickupDate;
   String pickupTime;
   String pickupLocation;
@@ -29,6 +30,7 @@ class BoookingHistoryModel {
 
   factory BoookingHistoryModel.fromJson(Map<String, dynamic> json) =>
       BoookingHistoryModel(
+        name: json["name"],
         id: json["id"],
         pickupDate: json["pickup_date"],
         pickupTime: json["pickup_time"],
@@ -38,6 +40,7 @@ class BoookingHistoryModel {
       );
 
   Map<String, dynamic> toJson() => {
+        "name":name,
         "id": id,
         "pickup_date": pickupDate,
         "pickup_time": pickupTime,

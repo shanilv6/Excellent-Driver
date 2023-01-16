@@ -1,5 +1,4 @@
 import 'package:edriver/core/app_export.dart';
-import 'package:edriver/presentation/screens/forgotpassword_otp_screen/forgotpassword_otp_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';

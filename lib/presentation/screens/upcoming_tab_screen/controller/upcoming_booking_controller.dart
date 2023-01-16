@@ -62,11 +62,13 @@ class UpcomingBookingController extends GetxController {
 
         upComingList.forEach((element) {
           upcomingBookingList.add(UpcomingBookingModel(
+            name: element["name"],
             id: element["id"],
             pickupDate: element["pickup_date"],
             pickupTime: element["pickup_time"],
             pickupLocation: element["pickup_location"],
             dropLocation: element["drop_location"],
+
           ));
         });
         update();

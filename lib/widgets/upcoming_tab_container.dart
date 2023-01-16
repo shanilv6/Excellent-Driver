@@ -15,6 +15,7 @@ import 'package:intl/intl.dart';
 var bookingsid;
 
 class UpcomingTabContainer extends StatefulWidget {
+  final String name;
   final String dateAndTime;
   final String pickingPoint;
   final String droppingPoint;
@@ -27,7 +28,7 @@ class UpcomingTabContainer extends StatefulWidget {
       required this.droppingPoint,
       required this.pickingPoint,
       required this.id,
-      required this.pickingTime})
+      required this.pickingTime, required this.name})
       : super(key: key);
 
   @override
@@ -78,7 +79,7 @@ class _UpcomingTabContainerState extends State<UpcomingTabContainer> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Customer Name',
+                          widget.name,
                           style: Textstyles.upcomingBookingTitleStyle,
                         ),
                         SizedBox(
