@@ -14,7 +14,7 @@ import '../../../widgets/signup_textfield.dart';
 import 'controller/setpassword_controller.dart';
 
 class ForgotPasswordSetPasswordScreen extends StatefulWidget {
-   ForgotPasswordSetPasswordScreen({Key? key}) : super(key: key);
+   const ForgotPasswordSetPasswordScreen({Key? key}) : super(key: key);
 
   @override
   State<ForgotPasswordSetPasswordScreen> createState() => _ForgotPasswordSetPasswordScreenState();
@@ -36,6 +36,7 @@ var setPasswordController = Get.put(SetPasswordController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: ColorConstant.constantWhite,
       body: SafeArea(
           child: ListView(
             scrollDirection: Axis.vertical,

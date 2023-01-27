@@ -11,7 +11,7 @@ import '../../../core/utils/color_constant.dart';
 import '../../../core/utils/image_constant.dart';
 import '../../../core/utils/size_utils.dart';
 import '../../../core/utils/style.dart';
-import '../../../widgets/aleart_dilouge.dart';
+import '../../../widgets/alert_dialog.dart';
 import '../../../widgets/button_container.dart';
 import '../../../widgets/custom_appbar.dart';
 import 'package:image_picker/image_picker.dart';

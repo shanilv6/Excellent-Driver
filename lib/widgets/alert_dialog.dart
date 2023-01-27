@@ -15,12 +15,16 @@ class AlertDialogues extends StatelessWidget {
 
   final secondButtonOnpressed;
 
-
-
-  const AlertDialogues({Key? key,required this.buttonName2,required this.buttonName1,required this.title,required this.firstButtonOnpressed,required this.secondButtonOnpressed}) : super(key: key);
+  const AlertDialogues(
+      {Key? key,
+      required this.buttonName2,
+      required this.buttonName1,
+      required this.title,
+      required this.firstButtonOnpressed,
+      required this.secondButtonOnpressed})
+      : super(key: key);
 
   get imagecontroller => null;
-
 
   @override
   Widget build(BuildContext context) {
@@ -36,34 +40,29 @@ class AlertDialogues extends StatelessWidget {
       child: Column(
         children: [
           Text(
-           title,
+            title,
             style: Textstyles.upcomingBookingTitleStyle,
           ),
           SizedBox(
             height: getVerticalSize(25),
           ),
-
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               InkWell(
                 onTap: firstButtonOnpressed,
-
                 child: Text(
-                 buttonName1,
+                  buttonName1,
                   style: Textstyles.profilePicDeleteStyle,
                 ),
               ),
-
-                InkWell(
-                  onTap: secondButtonOnpressed,
-
-                  child: Text(
-                   buttonName2,
-                    style: Textstyles.profilePicDeleteStyle,
-                  ),
+              InkWell(
+                onTap: secondButtonOnpressed,
+                child: Text(
+                  buttonName2,
+                  style: Textstyles.profilePicDeleteStyle,
                 ),
-
+              ),
             ],
           )
         ],
